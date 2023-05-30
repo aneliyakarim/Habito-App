@@ -18,7 +18,7 @@ class JournalData: ObservableObject {
                 EntryRow(count: 2,
                          cards: [
                             CardData(card: .photo(value: ImageModel(fileName: "Peony", location: .resources)), size: .small),
-                            CardData(card: .text(value: TextData(text: "Some lovely pink Peonies I found in the garden today." )), size: .small)]),
+                            CardData(card: .text(value: TextData(text: "Some lovely pink Peonies I found in the garden today." )), size: .small, reward: 3)]),
                 EntryRow(count: 2,
                          cards:[
                             CardData(card: .photo(value: ImageModel(fileName: "Daisy", location: .resources)), size: .small),
@@ -28,7 +28,7 @@ class JournalData: ObservableObject {
                             CardData(card: .photo(value: ImageModel(fileName: "WhiteRose", location: .resources)), size: .large)]),
                 EntryRow(count: 1,
                          cards: [
-                         CardData(card: .text(value: TextData(text: "I need a little help identifying some of these flowers. I think steve has a coffee table book on flowers I might be able to borrow.")), size: .large)]),
+                         CardData(card: .text(value: TextData(text: "I need a little help identifying some of these flowers. I think steve has a coffee table book on flowers I might be able to borrow.")), size: .large, reward: 5)]),
                 EntryRow(count: 2,
                          cards: [
                          CardData(card: .photo(value: ImageModel(fileName: "LemonBloom", location: .resources)), size: .small),

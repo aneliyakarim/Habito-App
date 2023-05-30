@@ -3,7 +3,7 @@
 //  Habito
 //
 //  Created by Aneliya Mukhamedkarimova on 19/05/23.
-//
+// To develop a dododling feature as an activity.
 
 import SwiftUI
 

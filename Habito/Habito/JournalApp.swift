@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+@main
 struct JournalApp: App {
     @StateObject var journalData = JournalData()
     var body: some Scene {

@@ -80,6 +80,7 @@ enum Card: Equatable, CaseIterable, Codable {
 struct CardData: Equatable, Codable {
     var card: Card
     var size: CardSize = .large
+    var reward: Int = 0
     
     mutating func updateSize(from newsize: CardSize){
         size = newsize

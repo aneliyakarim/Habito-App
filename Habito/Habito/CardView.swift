@@ -28,6 +28,11 @@ struct CardView: View {
     }
 }
 
+struct RewardData: Equatable, Codable {
+    var reward = 0
+}
+
+
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(cardData: .constant(CardData(card: .mood(value: "😢"))), isEditing: true, fontStyle: .font1)
