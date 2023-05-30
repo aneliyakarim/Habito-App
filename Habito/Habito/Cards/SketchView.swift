@@ -13,6 +13,8 @@ struct SketchView: View {
     var fontStyle: JournalFont
 
     var size: CardSize
+    var reward = 0
+    
     @State private var penColor = Color.darkBrown
     
     private var penColors: [Color] {
@@ -33,10 +35,14 @@ struct SketchView: View {
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 0) {
-                if isEditing {
-                    Text("Draw a sketch")
-                        .foregroundColor(.darkBrown)
-                        .font(fontStyle.uiFont(15))
+                HStack {
+                    if isEditing {
+                        Text("Draw a sketch")
+                            .foregroundColor(.darkBrown)
+                            .font(fontStyle.uiFont(15))
+                        
+                        Spacer()
+                    }
                 }
             
                 Canvas { context, size in

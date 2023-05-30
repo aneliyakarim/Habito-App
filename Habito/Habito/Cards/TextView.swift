@@ -17,6 +17,8 @@ struct TextView: View {
         value.text == placeHolderText
     }
     
+    @State private var reward: Int?
+    
     var body: some View {
         VStack(alignment: .leading) {
             if isEditing {
@@ -60,6 +62,7 @@ struct TextView: View {
                         Color("dark-brown")
                             .opacity(containsPlaceHolderText ? 0 : 1)
                     )
+                RewardView(reward: $reward)
             }
         }
         .frame(maxWidth: .infinity, alignment: .topLeading)
