@@ -163,3 +163,7 @@ enum FontSize: CGFloat, CaseIterable, Codable {
     case medium = 16
     case large = 20
 }
+
+struct RewardData: Equatable, Codable {
+   var reward = 0
+}

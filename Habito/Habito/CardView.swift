@@ -23,15 +23,10 @@ struct CardView: View {
         case .photo(let value):
             PhotoView(value: Binding<ImageModel>( get: { value }, set: { cardData.card = .photo(value: $0) } ), isEditing: isEditing, fontStyle: fontStyle)
         case .text(let value):
-            TextView(value: Binding<TextData>( get: { value }, set: { cardData.card = .text(value: $0) } ), isEditing: isEditing, fontStyle: fontStyle)
+            TextView(value: Binding<TextData>( get: { value }, set: { cardData.card = .text(value: $0) } ), isEditing: isEditing, fontStyle: fontStyle, refReward: $cardData.reward)
         }
     }
 }
-
-struct RewardData: Equatable, Codable {
-    var reward = 0
-}
-
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {

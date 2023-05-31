@@ -17,7 +17,7 @@ struct TextView: View {
         value.text == placeHolderText
     }
     
-    @State private var reward: Int?
+    @Binding var refReward: Int
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -62,7 +62,7 @@ struct TextView: View {
                         Color("dark-brown")
                             .opacity(containsPlaceHolderText ? 0 : 1)
                     )
-                RewardView(reward: $reward)
+                RewardView(refReward: $refReward)
             }
         }
         .frame(maxWidth: .infinity, alignment: .topLeading)
@@ -76,7 +76,7 @@ struct TextView: View {
 
 struct TextView_Previews : PreviewProvider {
     static var previews: some View {
-        TextView(value: .constant(TextData()), isEditing: true)
+        TextView(value: .constant(TextData()), isEditing: true, refReward: .constant(3))
             .background(CardBackground())
     }
 }
