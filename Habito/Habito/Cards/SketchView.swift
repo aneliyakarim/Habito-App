@@ -13,7 +13,6 @@ struct SketchView: View {
     var fontStyle: JournalFont
 
     var size: CardSize
-    var reward = 0
     
     @State private var penColor = Color.darkBrown
     
@@ -31,6 +30,8 @@ struct SketchView: View {
                 .darkBrown]
         }
     }
+    
+    @Binding var refReward: Int
 
     var body: some View {
         VStack {
@@ -43,6 +44,8 @@ struct SketchView: View {
                         
                         Spacer()
                     }
+                    Spacer()
+                    RewardView(refReward: $refReward)
                 }
             
                 Canvas { context, size in
@@ -104,7 +107,7 @@ struct SketchView: View {
 
 struct SketchView_Previews : PreviewProvider {
     static var previews: some View {
-        SketchView(value: .constant([Line(points: [CGPoint(), CGPoint()], color: Color.black, lineWidth: 5)]), isEditing: true, fontStyle: .font1, size: .large)
+        SketchView(value: .constant([Line(points: [CGPoint(), CGPoint()], color: Color.black, lineWidth: 5)]), isEditing: true, fontStyle: .font1, size: .large, refReward: .constant(3))
             .background(CardBackground())
     }
 }

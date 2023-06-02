@@ -45,6 +45,7 @@
 		D09CC8E62A17CA4B00263DCE /* PreviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8E52A17CA4B00263DCE /* PreviewsView.swift */; };
 		D09CC8E82A17CA8600263DCE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8E72A17CA8600263DCE /* SettingsView.swift */; };
 		D09CC8EA2A17CB5D00263DCE /* ThemeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8E92A17CB5D00263DCE /* ThemeViews.swift */; };
+		D0C3576D2A28EDCD0074E0E5 /* CleanPlanetViewHalf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C3576C2A28EDCD0074E0E5 /* CleanPlanetViewHalf.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		D09CC8E52A17CA4B00263DCE /* PreviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewsView.swift; sourceTree = "<group>"; };
 		D09CC8E72A17CA8600263DCE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D09CC8E92A17CB5D00263DCE /* ThemeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViews.swift; sourceTree = "<group>"; };
+		D0C3576C2A28EDCD0074E0E5 /* CleanPlanetViewHalf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanPlanetViewHalf.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				D02B4A2A2A249A790050B9B0 /* Components */,
 				D09CC8AA2A179FAE00263DCE /* MoodView.swift */,
+				D0C3576C2A28EDCD0074E0E5 /* CleanPlanetViewHalf.swift */,
 				D09CC8AC2A179FF500263DCE /* MoodViewFull.swift */,
 				D09CC8AE2A17A02E00263DCE /* MoodViewHalf.swift */,
 				D09CC8B12A17A15E00263DCE /* PhotoView.swift */,
@@ -283,6 +286,7 @@
 				D09CC8BC2A17A2EF00263DCE /* TextView.swift in Sources */,
 				D09CC8AD2A179FF500263DCE /* MoodViewFull.swift in Sources */,
 				D09CC8CD2A17A59500263DCE /* CurveThemeView.swift in Sources */,
+				D0C3576D2A28EDCD0074E0E5 /* CleanPlanetViewHalf.swift in Sources */,
 				D09CC8E42A17C98100263DCE /* PickCardView.swift in Sources */,
 				D09CC8D32A17A62000263DCE /* WaveThemeView.swift in Sources */,
 				D09CC8D82A17A6B900263DCE /* CirclesView.swift in Sources */,

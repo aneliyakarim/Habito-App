@@ -16,9 +16,10 @@ enum Card: Equatable, CaseIterable, Codable {
     case sketch(value: [Line])
     case text(value: TextData)
     case photo(value: ImageModel)
+    case cleanPlanet(value: Double)
     
     static var allCases: [Card] {
-        return [.sleep(value: 0), .mood(value: "😁"), .text(value: TextData()), .photo(value: ImageModel()), .sketch(value: [Line]())]}
+        return [.sleep(value: 0), .mood(value: "😁"), .text(value: TextData()), .photo(value: ImageModel()), .sketch(value: [Line]()), .cleanPlanet(value: 0)]}
     
     var id: UUID { UUID() }
     
@@ -41,6 +42,8 @@ enum Card: Equatable, CaseIterable, Codable {
             return "Text Field"
         case photo(_):
             return "Photo"
+        case .cleanPlanet(_):
+            return "Clean Planet"
         }
     }
     
@@ -56,6 +59,8 @@ enum Card: Equatable, CaseIterable, Codable {
             return "textformat"
         case photo(_):
             return "photo.fill"
+        case .cleanPlanet(_):
+            return "trash"
         }
     }
     
