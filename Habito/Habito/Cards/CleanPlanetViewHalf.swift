@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct CleanPlanetViewHalf: View {
-    @Binding var value: Double
+    @Binding var value: CleanPlanetData
     @Binding var refReward: Int
     
     var isEditing: Bool
@@ -25,13 +25,13 @@ struct CleanPlanetViewHalf: View {
             
             Spacer()
             
-            Text("\(Int(value))")
+            Text("\(Int(value.trash))")
                 .modifier(FontStyle(size: 50))
 
             Spacer()
             
             if isEditing {
-                Stepper("Trash to Bin", value: $value, in: 0...99, step: 1)
+                Stepper("Trash to Bin", value: $value.trash, in: 0...99, step: 1)
                     .labelsHidden()
             }
             
@@ -44,6 +44,6 @@ struct CleanPlanetViewHalf: View {
 
 struct CleanPlanetViewHalf_Previews: PreviewProvider {
     static var previews: some View {
-        CleanPlanetViewHalf(value: .constant(13), refReward: .constant(3), isEditing: true, fontStyle: .font1)
+        CleanPlanetViewHalf(value: .constant(CleanPlanetData(trash: 5, recycle: 0)), refReward: .constant(3), isEditing: true, fontStyle: .font1)
     }
 }

@@ -46,6 +46,8 @@
 		D09CC8E82A17CA8600263DCE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8E72A17CA8600263DCE /* SettingsView.swift */; };
 		D09CC8EA2A17CB5D00263DCE /* ThemeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8E92A17CB5D00263DCE /* ThemeViews.swift */; };
 		D0C3576D2A28EDCD0074E0E5 /* CleanPlanetViewHalf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C3576C2A28EDCD0074E0E5 /* CleanPlanetViewHalf.swift */; };
+		D0C3576F2A2A414D0074E0E5 /* CleanPlanetViewFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C3576E2A2A414D0074E0E5 /* CleanPlanetViewFull.swift */; };
+		D0C357712A2A4C760074E0E5 /* CleanPlanetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C357702A2A4C760074E0E5 /* CleanPlanetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,8 @@
 		D09CC8E72A17CA8600263DCE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D09CC8E92A17CB5D00263DCE /* ThemeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViews.swift; sourceTree = "<group>"; };
 		D0C3576C2A28EDCD0074E0E5 /* CleanPlanetViewHalf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanPlanetViewHalf.swift; sourceTree = "<group>"; };
+		D0C3576E2A2A414D0074E0E5 /* CleanPlanetViewFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanPlanetViewFull.swift; sourceTree = "<group>"; };
+		D0C357702A2A4C760074E0E5 /* CleanPlanetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanPlanetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 				D02B4A2A2A249A790050B9B0 /* Components */,
 				D09CC8AA2A179FAE00263DCE /* MoodView.swift */,
 				D0C3576C2A28EDCD0074E0E5 /* CleanPlanetViewHalf.swift */,
+				D0C357702A2A4C760074E0E5 /* CleanPlanetView.swift */,
+				D0C3576E2A2A414D0074E0E5 /* CleanPlanetViewFull.swift */,
 				D09CC8AC2A179FF500263DCE /* MoodViewFull.swift */,
 				D09CC8AE2A17A02E00263DCE /* MoodViewHalf.swift */,
 				D09CC8B12A17A15E00263DCE /* PhotoView.swift */,
@@ -276,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C357712A2A4C760074E0E5 /* CleanPlanetView.swift in Sources */,
 				D020A6432A165B080058D456 /* ContentView.swift in Sources */,
 				D09CC8BA2A17A2CD00263DCE /* SleepViewHalf.swift in Sources */,
 				D09CC8E22A17C92900263DCE /* JournalApp.swift in Sources */,
@@ -313,6 +320,7 @@
 				D09CC8CA2A17A51800263DCE /* JournalData.swift in Sources */,
 				D09CC8B22A17A15E00263DCE /* PhotoView.swift in Sources */,
 				D09CC8C22A17A40200263DCE /* Card.swift in Sources */,
+				D0C3576F2A2A414D0074E0E5 /* CleanPlanetViewFull.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

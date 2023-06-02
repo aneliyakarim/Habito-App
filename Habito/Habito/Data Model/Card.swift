@@ -16,10 +16,10 @@ enum Card: Equatable, CaseIterable, Codable {
     case sketch(value: [Line])
     case text(value: TextData)
     case photo(value: ImageModel)
-    case cleanPlanet(value: Double)
+    case cleanPlanet(value: CleanPlanetData)
     
     static var allCases: [Card] {
-        return [.sleep(value: 0), .mood(value: "😁"), .text(value: TextData()), .photo(value: ImageModel()), .sketch(value: [Line]()), .cleanPlanet(value: 0)]}
+        return [.sleep(value: 0), .mood(value: "😁"), .text(value: TextData()), .photo(value: ImageModel()), .sketch(value: [Line]()), .cleanPlanet(value: CleanPlanetData(trash: 0, recycle: 0))]}
     
     var id: UUID { UUID() }
     
@@ -161,6 +161,11 @@ struct Line: Identifiable, Equatable, Codable {
 struct TextData: Equatable, Codable {
     var text: String = "Write Something"
     var fontSize: FontSize = .medium
+}
+
+struct CleanPlanetData: Equatable, Codable {
+    var trash: Int = 0
+    var recycle: Int = 0
 }
 
 enum FontSize: CGFloat, CaseIterable, Codable {
