@@ -26,6 +26,10 @@ struct CardView: View {
             TextView(value: Binding<TextData>( get: { value }, set: { cardData.card = .text(value: $0) } ), isEditing: isEditing, fontStyle: fontStyle, refReward: $cardData.reward)
         case .cleanPlanet(let value):
             CleanPlanetView(value: Binding<CleanPlanetData>( get: { value }, set: { cardData.card = .cleanPlanet(value: $0) } ), refReward: $cardData.reward, isEditing: isEditing, fontStyle: fontStyle, size: cardData.size)
+        case .pickUpToys(let value):
+            PickUpView(value: Binding<PickUpData>( get: { value }, set: { cardData.card = .pickUpToys(value: $0) } ), refReward: $cardData.reward, isEditing: isEditing, fontStyle: fontStyle, size: cardData.size)
+        case .introText(_):
+            IntroTextView()
         }
     }
 }

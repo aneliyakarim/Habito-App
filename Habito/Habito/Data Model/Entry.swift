@@ -9,11 +9,12 @@ import SwiftUI
 
 struct Entry: Identifiable, Equatable, Hashable, Codable {
     var id = UUID()
+    var createdOn = Date()
     var title = ""
     var font : JournalFont = .font1
     var theme: JournalTheme = .line
     var entryRows: [EntryRow] = [
-        EntryRow(count: 1, cards: [CardData(card: .text(value: TextData()), size: .large)])
+        EntryRow(count: 1, cards: [CardData(card: .introText(value: ""), size: .large)])
     ]
 
    mutating func addCard(card: CardData) {

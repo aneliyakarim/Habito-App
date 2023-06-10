@@ -17,9 +17,11 @@ enum Card: Equatable, CaseIterable, Codable {
     case text(value: TextData)
     case photo(value: ImageModel)
     case cleanPlanet(value: CleanPlanetData)
+    case pickUpToys(value: PickUpData)
+    case introText(value: String)
     
     static var allCases: [Card] {
-        return [.sleep(value: 0), .mood(value: "😁"), .text(value: TextData()), .photo(value: ImageModel()), .sketch(value: [Line]()), .cleanPlanet(value: CleanPlanetData(trash: 0, recycle: 0))]}
+        return [.sleep(value: 0), .mood(value: "😁"), .text(value: TextData()), .photo(value: ImageModel()), .sketch(value: [Line]()), .cleanPlanet(value: CleanPlanetData(trash: 0, recycle: 0)), .pickUpToys(value: PickUpData(isPickedUp1: false, isPickedUp2: false, isPickedUp3: false))]}
     
     var id: UUID { UUID() }
     
@@ -42,8 +44,12 @@ enum Card: Equatable, CaseIterable, Codable {
             return "Text Field"
         case photo(_):
             return "Photo"
-        case .cleanPlanet(_):
+        case cleanPlanet(_):
             return "Clean Planet"
+        case pickUpToys(_):
+            return "Pick Up Toys"
+        case introText(_):
+            return ""
         }
     }
     
@@ -59,8 +65,12 @@ enum Card: Equatable, CaseIterable, Codable {
             return "textformat"
         case photo(_):
             return "photo.fill"
-        case .cleanPlanet(_):
+        case cleanPlanet(_):
             return "trash"
+        case pickUpToys(_):
+            return "teddybear.fill"
+        case introText(_):
+            return ""
         }
     }
     
@@ -76,6 +86,10 @@ enum Card: Equatable, CaseIterable, Codable {
             return valueL == valueR
         case (.photo(let valueL), .photo(let valueR)):
             return valueL.url == valueR.url
+//        case (.cleanPlanet(let valueL), .cleanPlanet(let valueR)):
+//            return valueL.url == valueR.url
+//        case (.pickUpToys(let valueL), .pickUpToys(let valueR)):
+//            return valueL.url == valueR.url
         default:
             return false
         }
@@ -166,6 +180,35 @@ struct TextData: Equatable, Codable {
 struct CleanPlanetData: Equatable, Codable {
     var trash: Int = 0
     var recycle: Int = 0
+}
+
+struct PickUpData: Equatable, Codable {
+    var isPickedUp1: Bool = false
+    var isPickedUp2: Bool = false
+    var isPickedUp3: Bool = false
+}
+
+struct CheckboxToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack {
+ 
+            RoundedRectangle(cornerRadius: 5.0)
+                .stroke(lineWidth: 4)
+                .frame(width: 45, height: 45)
+                .cornerRadius(5.0)
+                .overlay {
+                    Image(systemName: configuration.isOn ? "checkmark" : "")
+                }
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        configuration.isOn.toggle()
+                    }
+                }
+ 
+            configuration.label
+ 
+        }
+    }
 }
 
 enum FontSize: CGFloat, CaseIterable, Codable {
