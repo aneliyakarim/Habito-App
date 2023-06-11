@@ -53,7 +53,7 @@ struct EditingButton: View {
     @Binding var entries: [Entry]
     @Binding var entry: Entry
     @Binding var entryCopy: Entry
-    @Binding var isNew: Bool
+    var isNew: Bool
     @Binding var isEditing : Bool
     var action: () -> Void = { }
     var isAdded: Bool {
@@ -61,38 +61,40 @@ struct EditingButton: View {
     }
     
     var body: some View {
-        Button {
-            if isNew && isEditing {
-                if !isAdded {
-                    entries.append(entryCopy)
-                } else {
-                    if let index = entries.firstIndex(where: { $0.id == entryCopy.id }){
-                        entries[index].update(from: entryCopy)
+        HStack {
+            Button {
+                if isNew && isEditing {
+                    if !isAdded {
+                        entries.append(entryCopy)
+                    } else {
+                        if let index = entries.firstIndex(where: { $0.id == entryCopy.id }){
+                            entries[index].update(from: entryCopy)
+                        }
                     }
+                } else if !isNew && isEditing {
+                    entry.update(from: entryCopy)
+                } else if !isNew && !isEditing {
+                    entryCopy = entry
                 }
-            } else if !isNew && isEditing {
-                entry.update(from: entryCopy)
-            } else if !isNew && !isEditing {
-                entryCopy = entry
-            }
-            withAnimation(.spring()) {
-                isEditing.toggle()
-            }
-        } label: {
-            if isNew && isEditing {
-                if isAdded {
+                withAnimation(.spring()) {
+                    isEditing.toggle()
+                }
+            } label: {
+                if isNew && isEditing {
+                    if isAdded {
+                        Text("Done")
+                            .fontWeight(.medium)
+                    } else {
+                        Text("Add")
+                            .fontWeight(.medium)
+                    }
+                } else if !isNew && isEditing {
                     Text("Done")
                         .fontWeight(.medium)
-                } else {
-                    Text("Add")
+                } else if !isEditing {
+                    Text("Edit")
                         .fontWeight(.medium)
                 }
-            } else if !isNew && isEditing {
-                Text("Done")
-                    .fontWeight(.medium)
-            } else if !isEditing {
-                Text("Edit")
-                    .fontWeight(.medium)
             }
         }
     }
@@ -104,7 +106,7 @@ struct EntryDetail: View {
     
     @State private var isNew: Bool
     @State private var isEditing: Bool
-    @State private var entryCopy = Entry()
+    @State private var entryCopy = Entry(title: "")
     
     init(entries: Binding<[Entry]>, entry: Binding<Entry>, isNew: Bool) {
         self._entries = entries
@@ -114,28 +116,30 @@ struct EntryDetail: View {
     }
     
     var body: some View {
-        EntryView(entry: isNew ? $entryCopy : $entry, entryCopy: $entryCopy, isEditing: $isEditing)
-            .navigationBarBackButtonHidden(isNew ? false: isEditing)
-            .toolbar {
-                ToolbarItem {
-                    EditingButton(entries: $entries, entry: $entry, entryCopy: $entryCopy, isNew: $isNew, isEditing: $isEditing)
-                }
-                ToolbarItem (placement: .navigationBarLeading) {
-                    if !isNew && isEditing {
-                        Button("Cancel") {
-                            withAnimation(.spring()) {
-                                isEditing.toggle()
+        VStack {
+            EntryView(entry: isNew ? $entryCopy : $entry, entryCopy: $entryCopy, isEditing: $isEditing)
+                .navigationBarBackButtonHidden(isNew ? false: isEditing)
+                .toolbar {
+                    ToolbarItem {
+                        EditingButton(entries: $entries, entry: $entry, entryCopy: $entryCopy, isNew: isNew, isEditing: $isEditing)
+                    }
+                    ToolbarItem (placement: .navigationBarLeading) {
+                        if !isNew && isEditing {
+                            Button("Cancel") {
+                                withAnimation(.spring()) {
+                                    isEditing.toggle()
+                                }
                             }
                         }
                     }
                 }
-            }
+        }
     }
 }
 
 struct SettingsButton: View {
     @Binding var showSettings: Bool
-    var currentEntry: Entry = Entry()
+    var currentEntry: Entry = Entry(title: "")
     var action: () -> Void = { }
 
     var body: some View {

@@ -8,24 +8,15 @@
 import SwiftUI
 
 struct RewardView: View {
-
-    @Binding var reward: Int?
+   @Binding var refReward: Int
     
-    private func starType(index: Int) -> String {
-        
-        if let reward = self.reward {
-            return index <= reward ? "star.fill" : "star"
-        } else {
-            return "star"
-        }
-    }
     var body: some View {
         HStack {
             ForEach(1...5, id:\.self) { index in
-                Image(systemName: self.starType(index: index))
+                Image(systemName: index <= refReward ? "star.fill" : "star")
                     .foregroundColor(Color.orange)
                     .onTapGesture {
-                        self.reward = index
+                        refReward = index
                     }
             }
         }
@@ -34,6 +25,6 @@ struct RewardView: View {
 
 struct RewardView_Previews: PreviewProvider {
     static var previews: some View {
-        RewardView(reward: .constant(5))
+        RewardView(refReward: .constant(1))
     }
 }

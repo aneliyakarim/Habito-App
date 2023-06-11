@@ -12,7 +12,7 @@ struct MoodViewFull: View {
     var isEditing: Bool
     var fontStyle: JournalFont
     let displayEmojis = 3
-    private let emojis = ["😢", "😴", "😁", "😡", "😐"]
+    private let emojis = ["😢", "😴", "😁", "😡", "😐", "♻️", "🗑️"]
     
     var body: some View {
         VStack {

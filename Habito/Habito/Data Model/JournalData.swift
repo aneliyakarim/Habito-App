@@ -15,24 +15,33 @@ class JournalData: ObservableObject {
             theme: .dot,
             entryRows:
                 [
-                EntryRow(count: 2,
-                         cards: [
-                            CardData(card: .photo(value: ImageModel(fileName: "Peony", location: .resources)), size: .small),
-                            CardData(card: .text(value: TextData(text: "Some lovely pink Peonies I found in the garden today." )), size: .small, reward: 3)]),
-                EntryRow(count: 2,
-                         cards:[
-                            CardData(card: .photo(value: ImageModel(fileName: "Daisy", location: .resources)), size: .small),
-                            CardData(card: .text(value: TextData(text: "I’m going to bring some of these dasies to the neighbors as a housewarming present.")), size: .small)]),
-                EntryRow(count: 1,
-                         cards:[
-                            CardData(card: .photo(value: ImageModel(fileName: "WhiteRose", location: .resources)), size: .large)]),
-                EntryRow(count: 1,
-                         cards: [
-                         CardData(card: .text(value: TextData(text: "I need a little help identifying some of these flowers. I think steve has a coffee table book on flowers I might be able to borrow.")), size: .large, reward: 5)]),
-                EntryRow(count: 2,
-                         cards: [
-                         CardData(card: .photo(value: ImageModel(fileName: "LemonBloom", location: .resources)), size: .small),
-                         CardData(card: .mood(value: "😁"), size: .small)])
+                    EntryRow(count: 2,
+                             cards: [
+                                CardData(card: .photo(value: ImageModel(fileName: "Peony", location: .resources)), size: .small),
+                                CardData(card: .text(value: TextData(text: "Some lovely pink Peonies I found in the garden today." )), size: .small, reward: 3)]),
+                    EntryRow(count: 2,
+                             cards:[
+                                CardData(card: .photo(value: ImageModel(fileName: "Daisy", location: .resources)), size: .small),
+                                CardData(card: .text(value: TextData(text: "I’m going to bring some of these dasies to the neighbors as a housewarming present.")), size: .small)]),
+                    EntryRow(count: 1,
+                             cards:[
+                                CardData(card: .photo(value: ImageModel(fileName: "WhiteRose", location: .resources)), size: .large)]),
+                    EntryRow(count: 1,
+                             cards: [
+                                CardData(card: .text(value: TextData(text: "I need a little help identifying some of these flowers. I think steve has a coffee table book on flowers I might be able to borrow.")), size: .large, reward: 5)]),
+                    EntryRow(count: 2,
+                             cards: [
+                                CardData(card: .photo(value: ImageModel(fileName: "LemonBloom", location: .resources)), size: .small),
+                                CardData(card: .mood(value: "😁"), size: .small)]),
+                    EntryRow(count: 1,
+                             cards: [
+                                CardData(
+                                    card: .pickUpToys(
+                                        value: PickUpData(
+                                            isPickedUp1: true, isPickedUp2: true, isPickedUp3: false
+                                        )
+                                    ), size: .large)
+                             ])
                 ]
         ),
         Entry(
@@ -41,16 +50,16 @@ class JournalData: ObservableObject {
             theme: .curve,
             entryRows:
                 [
-                EntryRow(count: 1,
-                         cards: [
+                    EntryRow(count: 1,
+                             cards: [
                                 CardData(card: .text(value: TextData(text: "I spent the day packing for the trip and making sure I have everything! Less than a week until we leave and I'm super excited for it!") ), size: .large)]),
-                EntryRow(count: 2,
-                         cards: [
-                            CardData(card: .text(value: TextData(text: "Booked a cabin up north and I’m going to go Skiing for the first time!")), size: .small),
-                            CardData(card: .photo(value: ImageModel(fileName: "Mountain", location: .resources)), size: .small)]),
-                EntryRow(count: 1,
-                         cards: [
-                            CardData(card: .sleep(value: 7), size: .large)])
+                    EntryRow(count: 2,
+                             cards: [
+                                CardData(card: .text(value: TextData(text: "Booked a cabin up north and I’m going to go Skiing for the first time!")), size: .small),
+                                CardData(card: .photo(value: ImageModel(fileName: "Mountain", location: .resources)), size: .small)]),
+                    EntryRow(count: 1,
+                             cards: [
+                                CardData(card: .sleep(value: 7), size: .large)])
                 ]
         )
     ]
@@ -62,7 +71,9 @@ class JournalData: ObservableObject {
     func getBindingToEntry(_ entry: Entry) -> Binding<Entry>? {
         Binding<Entry>(
             get: {
-                guard let index = self.entries.firstIndex(where: { $0.id == entry.id }) else { return Entry()}
+                guard let index = self.entries.firstIndex(where: { $0.id == entry.id }) else {
+                    return Entry(title: "")
+                }
                 return self.entries[index]
             },
             set: { entry in
@@ -71,7 +82,7 @@ class JournalData: ObservableObject {
             }
         )
     }
-        
+    
     private static func getDataFileURL() throws -> URL {
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             .appendingPathComponent("entries.data")

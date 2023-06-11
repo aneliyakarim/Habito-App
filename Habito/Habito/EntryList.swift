@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EntryList: View {
     @ObservedObject var journalData: JournalData
-    @State private var newEntry = Entry()
+    @State private var newEntry = Entry(title: "")
     @State private var selection: Entry?
 
     var body: some View{
@@ -43,7 +43,9 @@ struct EntryList: View {
         } detail: {
             ZStack {
                 if let entry = selection, let entryBinding = journalData.getBindingToEntry(entry) {
-                    EntryDetail(entries: $journalData.entries, entry: entryBinding, isNew: entry == newEntry)
+                    
+                    EntryDetail(entries: $journalData.entries, entry: entryBinding, isNew: entry == newEntry).id(entry.id)
+                    
                 } else {
                     SelectEntryView()
                 }
