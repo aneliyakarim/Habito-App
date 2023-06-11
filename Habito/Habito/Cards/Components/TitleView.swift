@@ -10,6 +10,7 @@ import SwiftUI
 struct TitleView: View {
     @Binding var entry: Entry
     var isEditing: Bool = false
+    
     var body: some View {
         ZStack {
             EntryBannerTheme(forTheme: entry.theme)
@@ -38,6 +39,6 @@ struct TitleView: View {
 
 struct TitleView_Previews: PreviewProvider {
     static var previews: some View {
-        TitleView(entry: .constant(Entry()), isEditing: false)
+        TitleView(entry: .constant(Entry(title: "")), isEditing: false)
     }
 }

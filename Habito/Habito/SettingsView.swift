@@ -72,7 +72,7 @@ struct SettingsView: View {
 
 struct SettingsView_Previews : PreviewProvider {
     static var previews: some View {
-        SettingsView(entry: .constant(Entry()), showingSheet: .constant(true))
+        SettingsView(entry: .constant(Entry(title: "prev.")), showingSheet: .constant(true))
     }
 }
 

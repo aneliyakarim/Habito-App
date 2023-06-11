@@ -18,7 +18,7 @@ enum Card: Equatable, CaseIterable, Codable {
     case photo(value: ImageModel)
     case cleanPlanet(value: CleanPlanetData)
     case pickUpToys(value: PickUpData)
-    case introText(value: String)
+    case introText
     
     static var allCases: [Card] {
         return [.sleep(value: 0), .mood(value: "😁"), .text(value: TextData()), .photo(value: ImageModel()), .sketch(value: [Line]()), .cleanPlanet(value: CleanPlanetData(trash: 0, recycle: 0)), .pickUpToys(value: PickUpData(isPickedUp1: false, isPickedUp2: false, isPickedUp3: false))]}
@@ -48,7 +48,7 @@ enum Card: Equatable, CaseIterable, Codable {
             return "Clean Planet"
         case pickUpToys(_):
             return "Pick Up Toys"
-        case introText(_):
+        case introText:
             return ""
         }
     }
@@ -69,7 +69,7 @@ enum Card: Equatable, CaseIterable, Codable {
             return "trash"
         case pickUpToys(_):
             return "teddybear.fill"
-        case introText(_):
+        case introText:
             return ""
         }
     }

@@ -11,7 +11,7 @@ struct MoodViewHalf: View {
     @Binding var value: String
     var isEditing: Bool
     var fontStyle: JournalFont
-    private let emojis = ["😢", "😴", "😁", "😡", "😐"]
+    private let emojis = ["😢", "😴", "😁", "😡", "😐", "♻️", "🗑️"]
     @State private var emojiIndex = 2
     
     var body: some View {

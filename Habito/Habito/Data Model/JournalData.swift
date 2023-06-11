@@ -71,7 +71,9 @@ class JournalData: ObservableObject {
     func getBindingToEntry(_ entry: Entry) -> Binding<Entry>? {
         Binding<Entry>(
             get: {
-                guard let index = self.entries.firstIndex(where: { $0.id == entry.id }) else { return Entry()}
+                guard let index = self.entries.firstIndex(where: { $0.id == entry.id }) else {
+                    return Entry(title: "")
+                }
                 return self.entries[index]
             },
             set: { entry in

@@ -71,7 +71,7 @@ struct PickCardView: View {
 
 struct PickCardView_Previews: PreviewProvider {
     static var previews: some View {
-        PickCardView(entry: .constant(Entry()), showingSheet: .constant(true))
+        PickCardView(entry: .constant(Entry(title: "pick cards")), showingSheet: .constant(true))
     }
 }
 

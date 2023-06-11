@@ -80,7 +80,6 @@ struct EntryView: View {
             EntryBackground(forTheme: currentEntry.theme)
                 .modifier(BackgroundStyle())
                 .opacity(isEditing ? 0.5 : 1)
-
         )
     }
     
@@ -96,7 +95,7 @@ struct EntryView: View {
 
 struct EntryView_Previews : PreviewProvider {
     static var previews: some View {
-        EntryView(entry: .constant(Entry()), entryCopy: .constant(Entry()), isEditing: .constant(true))
+        EntryView(entry: .constant(Entry(title: "")), entryCopy: .constant(Entry(title: "")), isEditing: .constant(true))
     }
 }
 
@@ -113,6 +112,3 @@ struct AddNewCardLabel: View {
         .padding(.vertical)
     }
 }
-
-
-

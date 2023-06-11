@@ -14,6 +14,7 @@
 		D020A64F2A165D080058D456 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D020A64E2A165D080058D456 /* SplashScreenView.swift */; };
 		D02B4A2C2A249AA90050B9B0 /* RewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B4A2B2A249AA90050B9B0 /* RewardView.swift */; };
 		D06544652A34E4F2004A0A91 /* IntroTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06544642A34E4F2004A0A91 /* IntroTextView.swift */; };
+		D06E9EF42A362AFD00AE0D39 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E9EF32A362AFD00AE0D39 /* SwiftUIView.swift */; };
 		D09CC8A92A166E9000263DCE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8A82A166E9000263DCE /* OnboardingView.swift */; };
 		D09CC8AB2A179FAE00263DCE /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8AA2A179FAE00263DCE /* MoodView.swift */; };
 		D09CC8AD2A179FF500263DCE /* MoodViewFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8AC2A179FF500263DCE /* MoodViewFull.swift */; };
@@ -63,6 +64,7 @@
 		D020A64E2A165D080058D456 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		D02B4A2B2A249AA90050B9B0 /* RewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardView.swift; sourceTree = "<group>"; };
 		D06544642A34E4F2004A0A91 /* IntroTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroTextView.swift; sourceTree = "<group>"; };
+		D06E9EF32A362AFD00AE0D39 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		D0720E692A18027000AD8475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D09CC8A82A166E9000263DCE /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		D09CC8AA2A179FAE00263DCE /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				D09CC8E52A17CA4B00263DCE /* PreviewsView.swift */,
 				D09CC8E72A17CA8600263DCE /* SettingsView.swift */,
 				D09CC8E92A17CB5D00263DCE /* ThemeViews.swift */,
+				D06E9EF32A362AFD00AE0D39 /* SwiftUIView.swift */,
 				D020A6442A165B0A0058D456 /* Assets.xcassets */,
 				D020A6462A165B0A0058D456 /* Preview Content */,
 			);
@@ -328,6 +331,7 @@
 			files = (
 				D0C357712A2A4C760074E0E5 /* CleanPlanetView.swift in Sources */,
 				D020A6432A165B080058D456 /* ContentView.swift in Sources */,
+				D06E9EF42A362AFD00AE0D39 /* SwiftUIView.swift in Sources */,
 				D06544652A34E4F2004A0A91 /* IntroTextView.swift in Sources */,
 				D09CC8BA2A17A2CD00263DCE /* SleepViewHalf.swift in Sources */,
 				D09CC8E22A17C92900263DCE /* JournalApp.swift in Sources */,
