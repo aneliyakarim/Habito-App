@@ -188,6 +188,13 @@ struct PickUpData: Equatable, Codable {
     var isPickedUp3: Bool = false
 }
 
+struct WordOfTheDay: Equatable, Codable {
+    var word1: String = ""
+    var word2: String = ""
+    var word3: String = ""
+}
+
+
 struct CheckboxToggleStyle: ToggleStyle {
     func makeBody(configuration: Configuration) -> some View {
         HStack {
