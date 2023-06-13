@@ -37,7 +37,6 @@
 		D09CC8D12A17A5F400263DCE /* RayThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8D02A17A5F400263DCE /* RayThemeView.swift */; };
 		D09CC8D32A17A62000263DCE /* WaveThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8D22A17A62000263DCE /* WaveThemeView.swift */; };
 		D09CC8D52A17A64A00263DCE /* YourTitleBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8D42A17A64A00263DCE /* YourTitleBanner.swift */; };
-		D09CC8D82A17A6B900263DCE /* CirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8D72A17A6B900263DCE /* CirclesView.swift */; };
 		D09CC8DA2A17C80A00263DCE /* ButtonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8D92A17C80A00263DCE /* ButtonViews.swift */; };
 		D09CC8DC2A17C88700263DCE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8DB2A17C88700263DCE /* CardView.swift */; };
 		D09CC8DE2A17C8BE00263DCE /* EntryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8DD2A17C8BE00263DCE /* EntryList.swift */; };
@@ -88,7 +87,6 @@
 		D09CC8D02A17A5F400263DCE /* RayThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayThemeView.swift; sourceTree = "<group>"; };
 		D09CC8D22A17A62000263DCE /* WaveThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveThemeView.swift; sourceTree = "<group>"; };
 		D09CC8D42A17A64A00263DCE /* YourTitleBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTitleBanner.swift; sourceTree = "<group>"; };
-		D09CC8D72A17A6B900263DCE /* CirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesView.swift; sourceTree = "<group>"; };
 		D09CC8D92A17C80A00263DCE /* ButtonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViews.swift; sourceTree = "<group>"; };
 		D09CC8DB2A17C88700263DCE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D09CC8DD2A17C8BE00263DCE /* EntryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryList.swift; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 				D09CC8D02A17A5F400263DCE /* RayThemeView.swift */,
 				D09CC8D22A17A62000263DCE /* WaveThemeView.swift */,
 				D09CC8D42A17A64A00263DCE /* YourTitleBanner.swift */,
-				D09CC8D72A17A6B900263DCE /* CirclesView.swift */,
 			);
 			path = "Title Views";
 			sourceTree = "<group>";
@@ -346,7 +343,6 @@
 				D0C3576D2A28EDCD0074E0E5 /* CleanPlanetViewHalf.swift in Sources */,
 				D09CC8E42A17C98100263DCE /* PickCardView.swift in Sources */,
 				D09CC8D32A17A62000263DCE /* WaveThemeView.swift in Sources */,
-				D09CC8D82A17A6B900263DCE /* CirclesView.swift in Sources */,
 				D09CC8C62A17A4AC00263DCE /* Entry.swift in Sources */,
 				D09CC8B82A17A27F00263DCE /* SleepViewFull.swift in Sources */,
 				D09CC8AF2A17A02E00263DCE /* MoodViewHalf.swift in Sources */,
@@ -510,14 +506,13 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Habito;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.App-etite.Habito";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -542,8 +537,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
