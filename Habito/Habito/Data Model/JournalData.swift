@@ -32,13 +32,23 @@ class JournalData: ObservableObject {
                     EntryRow(count: 2,
                              cards: [
                                 CardData(card: .photo(value: ImageModel(fileName: "LemonBloom", location: .resources)), size: .small),
-                                CardData(card: .mood(value: "😁"), size: .small)]),
+                                CardData(card: .mood(value: "😁"), size: .small)])
+                    /*
                     EntryRow(count: 1,
                              cards: [
                                 CardData(
                                     card: .pickUpToys(
                                         value: PickUpData(
                                             isPickedUp1: true, isPickedUp2: true, isPickedUp3: false
+                                        )
+                                    ), size: .large)
+                             ]) */,
+                    EntryRow(count: 1,
+                             cards: [
+                                CardData(
+                                    card: .cleanPlanet(
+                                        value: CleanPlanetData(
+                                            trash: 3, recycle: 1
                                         )
                                     ), size: .large)
                              ])
