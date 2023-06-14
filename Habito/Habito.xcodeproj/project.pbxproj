@@ -13,6 +13,7 @@
 		D020A6482A165B0A0058D456 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D020A6472A165B0A0058D456 /* Preview Assets.xcassets */; };
 		D020A64F2A165D080058D456 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D020A64E2A165D080058D456 /* SplashScreenView.swift */; };
 		D02B4A2C2A249AA90050B9B0 /* RewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B4A2B2A249AA90050B9B0 /* RewardView.swift */; };
+		D046D6082A38EA99001BB80D /* ResponsiveLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046D6072A38EA99001BB80D /* ResponsiveLayout.swift */; };
 		D06544652A34E4F2004A0A91 /* IntroTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06544642A34E4F2004A0A91 /* IntroTextView.swift */; };
 		D06E9EF42A362AFD00AE0D39 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E9EF32A362AFD00AE0D39 /* SwiftUIView.swift */; };
 		D09CC8A92A166E9000263DCE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC8A82A166E9000263DCE /* OnboardingView.swift */; };
@@ -62,6 +63,7 @@
 		D020A6472A165B0A0058D456 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D020A64E2A165D080058D456 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		D02B4A2B2A249AA90050B9B0 /* RewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardView.swift; sourceTree = "<group>"; };
+		D046D6072A38EA99001BB80D /* ResponsiveLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveLayout.swift; sourceTree = "<group>"; };
 		D06544642A34E4F2004A0A91 /* IntroTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroTextView.swift; sourceTree = "<group>"; };
 		D06E9EF32A362AFD00AE0D39 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		D0720E692A18027000AD8475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				D09CC8E12A17C92900263DCE /* JournalApp.swift */,
 				D09CC8E32A17C98100263DCE /* PickCardView.swift */,
 				D09CC8E52A17CA4B00263DCE /* PreviewsView.swift */,
+				D046D6072A38EA99001BB80D /* ResponsiveLayout.swift */,
 				D09CC8E72A17CA8600263DCE /* SettingsView.swift */,
 				D09CC8E92A17CB5D00263DCE /* ThemeViews.swift */,
 				D06E9EF32A362AFD00AE0D39 /* SwiftUIView.swift */,
@@ -347,6 +350,7 @@
 				D09CC8B82A17A27F00263DCE /* SleepViewFull.swift in Sources */,
 				D09CC8AF2A17A02E00263DCE /* MoodViewHalf.swift in Sources */,
 				D09CC8D12A17A5F400263DCE /* RayThemeView.swift in Sources */,
+				D046D6082A38EA99001BB80D /* ResponsiveLayout.swift in Sources */,
 				D09CC8A92A166E9000263DCE /* OnboardingView.swift in Sources */,
 				D09CC8DC2A17C88700263DCE /* CardView.swift in Sources */,
 				D020A6412A165B080058D456 /* HabitoApp.swift in Sources */,
@@ -507,6 +511,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -538,6 +543,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
